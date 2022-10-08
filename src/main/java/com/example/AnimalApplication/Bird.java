@@ -1,12 +1,14 @@
 package com.example.AnimalApplication;
 
-public class Bird extends Animal {
+abstract class Bird extends Animal {
+
+    Singable singableBehaviour;
     public String fly() {
         return "I am flying";
     }
 
     public String sing() {
-        return "I am singing";
+        return singableBehaviour.sing();
     }
 
 
